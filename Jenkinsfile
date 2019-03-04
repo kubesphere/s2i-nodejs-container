@@ -51,6 +51,9 @@ make VERSIONS="8" BASE_IMAGE_NAME="nodejs" test'''
       }
     }
     stage('push to dockerhub'){
+      when {
+        branch 'master'
+      }
       steps{
         container('go'){
           withCredentials([usernamePassword(passwordVariable : 'DOCKER_PASSWORD' ,usernameVariable : 'DOCKER_USERNAME' ,credentialsId : "$DOCKERHUB_CREDENTIAL_ID" ,)]) {
