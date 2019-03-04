@@ -11,7 +11,7 @@ pipeline {
   stages {
     stage('checkout scm ') {
       steps {
-        git(url: 'https://github.com/kubesphere/s2i-nodejs-container', changelog: true, poll: false)
+        checkout(scm)
       }
     }
     stage('prepare') {
