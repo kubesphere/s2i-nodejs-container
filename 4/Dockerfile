@@ -1,4 +1,4 @@
-FROM kubespehredev/s2i-base-centos7
+FROM kubespheredev/s2i-base-centos7
 
 # This image provides a Node.JS environment you can use to run your Node.JS
 # applications.
